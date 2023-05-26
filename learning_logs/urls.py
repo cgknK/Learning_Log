@@ -1,3 +1,6 @@
+"""Burada herhangi bir çalışan fonksiyon olmamasına rağmen urlpatterns nasıl
+eşleşen url'i views.py'ye gönderiyor. Bu alien_invasion'daki settings.py gibi
+çalışmıyor mu?"""
 """Defines URL patterns for learning_logs."""
 
 from django.urls import path
@@ -13,6 +16,14 @@ urlpatterns = [
     path('topics/', views.topics, name='topics'),
     # Detail page for a single topic.
     path('topics/<int:topic_id>', views.topic, name='topic'),
+    # Page for adding a new topic
+    # İyi de her kullanıcı için aynı url olmuyor mu? Bu anlamsız bir çakışma 
+    #durumu değil mi?(new_topic/<int:user_id> gibi olması gerekmiyor mu?)
+    path('new_topic/', views.new_topic, name='new_topic'),
+    # Page for adding a new entry
+    path('new_entry/<int:topic_id>/', views.new_entry, name='new_entry'),
+    # Page for editing an entry
+    path('edit_entry/<int:entry_id>/', views.edit_entry, name='edit_entry'),
 ]
 
 """
