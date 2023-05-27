@@ -1,8 +1,20 @@
 # Learning_Log
 Eric Matthes, Python Crash Course 2/e
 
-
-
+--------
+e-mail ve robot kontrolü ile spam veya bot kayıtlarına önlem al.
+--------
+En son projeye; base.html'e json.dump butonu ekle ve veri tabanını indir, 
+yapılabiliniyor ise dosyayı geri db'ye çevir.
+--------
+NOTE
+You can simply reset the database instead of migrating, but that will lose all
+existing data. It’s good practice to learn how to migrate a database while
+maintaining the integrity of users’ data. If you do want to start with a fresh
+database, issue the command python manage.py flush to rebuild the database
+structure. You’ll have to create a new superuser, and all of your data will be
+gone.
+--------
     A decorator is a directive placed just before a function definition that 
 Python applies to the function before it runs, to alter how the function code 
 behaves. 
