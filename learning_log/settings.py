@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 
+# My settings
+LOGIN_URL = 'users:login'
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -39,6 +42,7 @@ gerekiyor gibi geliyor, bunun çalışma mantığını öğren?
 INSTALLED_APPS = [
     # My apps
     'learning_logs',
+    'users',
 
     # Default django apps.
     'django.contrib.admin',

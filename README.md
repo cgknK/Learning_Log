@@ -1,6 +1,17 @@
 # Learning_Log
 Eric Matthes, Python Crash Course 2/e
 
+
+
+    A decorator is a directive placed just before a function definition that 
+Python applies to the function before it runs, to alter how the function code 
+behaves. 
+--------
+ll_admin 1234
+ll_user 1234user
+--------
+users/template/registiration/ndefault_logged_out.html'i kullanamadım, django'nun
+    default views func değiştirmeden
 ---------
 pip freeze > requirements.txt
 pip install -r requirements.txt

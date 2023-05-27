@@ -5,6 +5,7 @@ from  .models import Topic, Entry
 class TopicForm(forms.ModelForm):
 
     class Meta:
+        # Bu modellerin parantezleri nerede? neden yok? Topic()
         model = Topic
         fields = ['text']
         labels = {'text': ''}

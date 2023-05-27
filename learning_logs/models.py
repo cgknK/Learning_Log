@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Topic(models.Model):
     """A topic the user is learning about."""
@@ -6,6 +7,7 @@ class Topic(models.Model):
     # __init__ neden yok, normal classlarda da olması zorunlu değil mi? Dene.
     text = models.CharField(max_length=200)
     date_added = models.DateTimeField(auto_now_add=True)
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
 
     # Direkt def str(self) yada __init__(self) diyebilir miydik dene?
     #ve neden __init__ yerine __str__ tercih edilmiş?
