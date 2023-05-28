@@ -1,8 +1,11 @@
 # Learning_Log
 Eric Matthes, Python Crash Course 2/e
 
-
-
+--------
+NOTE
+If a package is listed on your system but the version number dif ers from what’s
+shown here, keep the version you have on your system.
+_Anlamadım
 --------
 ll_env/lib neden yok?
 --------
