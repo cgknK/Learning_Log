@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 
+import os
+
 # My settings
 LOGIN_URL = 'users:login'
 
@@ -26,9 +28,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-gk*0-0)#3z1%tt6qv^v(+f9t%ih4qd82ms0#ju_%in$+g!bf=o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+"""Also, be careful not to do this once users are regularly accessing your site._Neden"""
+"""
+if os.environ.get('DEBUG') == 'TRUE':
+    DEBUG = True
+elif os.environ.get('DEBUG') == 'FALSE':
+    DEBUG = False
+"""
+DEBUG = False
 
-ALLOWED_HOSTS = []
+#'http://localhost:8000/',
+#"Set DEBUG based on environment variables." commit
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -71,7 +82,8 @@ ROOT_URLCONF = 'learning_log.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR), 'templates'],
+        #'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
