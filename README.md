@@ -1,6 +1,21 @@
 # Learning_Log
 Eric Matthes, Python Crash Course 2/e
 
+
+
+--------
+ll_env/lib neden yok?
+--------
+edit topic, delete topic, delete entry, delete user, edit user eklenecek
+--------
+NOTE:
+If you want to use a dif erent Bootstrap template, follow a similar process to
+what we’ve done so far in this chapter. Copy the template you want to use into
+base.html, and modify the elements that contain actual content so the template
+displays your project’s information. Then use Bootstrap’s individual styling 
+tools to style the content on each page.
+--------
+login olan kullanıcıyı '/topics/'e yolla
 --------
 e-mail ve robot kontrolü ile spam veya bot kayıtlarına önlem al.
 --------
