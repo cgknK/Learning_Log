@@ -1,6 +1,24 @@
 {% extends "learning_logs/base.html" %}
+<!--- buraya neden load bstrap4 demedik, eğer base.html'den alıyorsa diğerlerine 
+    neden ekliyoru<? --->
 
-{% block content %}
-    <p>Learning Log helps you keep track of your learning,
-        for any topic you're learning about.</p>
-{% endblock content %}
+{% block page_header %}
+    <div class="jumbotron">
+        <h1 class="display-3">Track your learning.</h1>
+
+        <p class="lead">Make your own Learning Log, and keep a list of the 
+            topics you're learning about. Whenever you learn something new 
+        about a topic, make an entry summarizing what you've learned.</p>
+
+        {% if user.is_authenticated %}
+            <!-- ekleme yapılabilinir --->
+        {% else %}
+        <a class="btn btn-lg btn-primary" href="{% url 'users:register' %}" 
+            role="button">Register &raquo;</a>
+        {% endif %}
+    </div>
+{% endblock page_header %}
+
+<!--- if oturum açtıysa eklenmesi gerekiyor
+ya register yerine topics ya son topic ya best topic
+yada ayarlar-ayarlara kullanıcıyı böyle göndermeye gerek yok --->
