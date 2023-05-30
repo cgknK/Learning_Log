@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 
+# My append ----------------->
 import os
 
 # My settings
@@ -25,16 +26,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+# -------------------------------------->
 SECRET_KEY = 'django-insecure-gk*0-0)#3z1%tt6qv^v(+f9t%ih4qd82ms0#ju_%in$+g!bf=o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-"""Also, be careful not to do this once users are regularly accessing your site._Neden"""
-"""
-if os.environ.get('DEBUG') == 'TRUE':
-    DEBUG = True
-elif os.environ.get('DEBUG') == 'FALSE':
-    DEBUG = False
-"""
 DEBUG = False
 
 #'http://localhost:8000/',
@@ -150,3 +145,12 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+"""Also, be careful not to do this once users are regularly accessing your site._Neden"""
+"""
+if os.environ.get('DEBUG') == 'TRUE':
+    DEBUG = True
+elif os.environ.get('DEBUG') == 'FALSE':
+    DEBUG = False
+"""
