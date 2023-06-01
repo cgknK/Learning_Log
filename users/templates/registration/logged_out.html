@@ -1,7 +1,17 @@
 {% extends "learning_logs/base.html" %}
 
+{% block page_header %}
+    <div class="jumbotron">
+
+        <p class="lead">You have been logged out. Thank you for visiting!</p>
+
+        <a class="btn btn-lg btn-primary" href="{% url 'users:login' %}" 
+            role="button">Log in &raquo;</a>
+    </div>
+{% endblock page_header %}
+
 {% block content %}
     
-    <p>You have been logged out. Thank you for visiting!</p>
+    <p>Log out time: buna benzer birşey deeklenecek...</p>
 
 {% endblock content %}

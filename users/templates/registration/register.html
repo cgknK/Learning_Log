@@ -1,13 +1,27 @@
 {% extends "learning_logs/base.html" %}
+{% load bootstrap4 %}
+
+{% block page_header %}
+    <p>Register</p>
+{% endblock page_header %}
 
 {% block content %}
-    
     <form method="post" action="{% url 'users:register' %}">
         {% csrf_token %}
-        {{ form.as_p }}
+        {% bootstrap_form form %}
 
-        <button name="submit">Register</button>
+        {% buttons %}
+            <button name='submit' class="btn btn-primary">Register</button>
+        {% endbuttons %}
         <input type="hidden" name="next" value="{% url 'learning_logs:index' %}"/>
+        <!--
+            Bu olmasada redirect'de buraya yönlendirdiğinden mi nedir yine aynı
+            şekilde çalışıyor. _Anlamadım.
+            Birde bunun yeri buttons'un içi mi?
+            <input type="hidden" name="next" value="{% url 'learning_logs:index' %}"/>
+            hatta 'learning_logs:topics' yaptım yinede index'e yönlendiriyor
+            <input type="hidden" name="next" value="{% url 'learning_logs:index' %}"/>
+            o zaman bu neden var veya vardı?
+        -->
     </form>
-
 {% endblock content %}

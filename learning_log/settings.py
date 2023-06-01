@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 
+# My append ----------------->
+import os
+
+
 # My settings
 LOGIN_URL = 'users:login'
 
@@ -23,11 +27,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+# -------------------------------------->
 SECRET_KEY = 'django-insecure-gk*0-0)#3z1%tt6qv^v(+f9t%ih4qd82ms0#ju_%in$+g!bf=o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+#'http://localhost:8000/',
+#"Set DEBUG based on environment variables." commit
 ALLOWED_HOSTS = []
 
 
@@ -43,6 +50,9 @@ INSTALLED_APPS = [
     # My apps
     'learning_logs',
     'users',
+
+    # Third party apps.
+    'bootstrap4',
 
     # Default django apps.
     'django.contrib.admin',
@@ -68,7 +78,8 @@ ROOT_URLCONF = 'learning_log.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR), 'templates'],
+        #'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -135,3 +146,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+

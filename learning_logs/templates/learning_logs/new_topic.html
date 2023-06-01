@@ -1,12 +1,28 @@
 {% extends "learning_logs/base.html" %}
+{% load bootstrap4 %}
 
 {% block content %}
     <p>Add a new topic:</p>
 
-    <form action="{% url 'learning_logs:new_topic' %}" method='post'>
+    <!-- class="form" ne işe yarıyor, çıkartmak birşey değiştirmiyor diye gözüküyor -->
+    <form action="{% url 'learning_logs:new_topic' %}" method='post' class="form">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button name="submit">Add topic</button>
+        {% bootstrap_form form %}
+
+        <!-- {#% buttons %} ve endbutton'u yazmayıp, load bootstrap eklemesem 
+            bile aynı çalışıyor -->
+        {% buttons %}
+            <button name="submit" class="btn btn-primary">Add topic</button> 
+        {% endbuttons %}
     </form>
 
 {% endblock content %}
+<!--
+Projenin stilsiz hali base.html dışında çok daha iyiydi
+<button name="submit">Add topic</button>
+-->
+<!--
+login.html'de bunun olmasının sebebi login views'i bize hazır-bize ait- olmadığı 
+için mi? 
+    <input type="hidden" name="next" value="{#% url 'learning_logs:topics' %}">
+-->
