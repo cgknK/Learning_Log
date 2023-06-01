@@ -6,5 +6,5 @@ django-bootstrap5==23.1
 platformshconfig==2.4.0
 soupsieve==2.4.1
 sqlparse==0.4.4
-typing-extensions==4.6.2
+typing_extensions==4.6.2
 tzdata==2023.3

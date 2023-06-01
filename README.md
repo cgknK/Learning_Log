@@ -9,7 +9,6 @@ If a package is listed on your system but the version number dif ers from whatâ€
 shown here, keep the version you have on your system.
 _AnlamadÄ±m
 --------
-ll_env/lib neden yok?
 --------
 edit topic, delete topic, delete entry, delete user, edit user eklenecek
 --------
