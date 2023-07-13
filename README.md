@@ -2,12 +2,14 @@
 Eric Matthes, Python Crash Course 2/e
 
 --------
+README.md olması gerektiği gibi yapılacak
+--------
 ex20.05 ekle
 --------
 NOTE
 If a package is listed on your system but the version number dif ers from what’s
 shown here, keep the version you have on your system.
-_Anlamadım
+    _neresi için yazılmış XD
 --------
 --------
 edit topic, delete topic, delete entry, delete user, edit user eklenecek
